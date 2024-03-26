@@ -1,53 +1,20 @@
 <!DOCTYPE html>
 <html lang = "en">
+
+<!-- Body: Integrating Python into HTML for data handling/retrieving-->
+
 <!--"Backend" for tags-->
 <head>
+
+<!--Linking CSS file-->
+<link rel = "stylesheet" type = "text/css" href = "index2ndwebCSS.css">
+
+<!--Head: Python Incorporation(Succesful download)-->
 
 <!-- To prevent issues in display -->
 <meta charset = "utf-8">
 
-<!--Head: Python Incorporation-->
-<link rel="icon" type="image/png" href="favicon.png" />
-<link rel = "stylesheet" href = "../build/pyscript.css" />
-<script><defer src = "../build/pyscript.js" /> </script>
-
-<!--Setting the Background!-->
-    <style> 
-        body {background-color: rgb(0, 0, 0);}
-    </style>
-<!-- Aligning the Heading 1 -->
-    <style>
-        h1{text-align: center}
-    </style>
-<!--Aligning the Description-->
-    <style>
-        .header1{text-align: center}
-    </style>
-<!--Aligning the List of Payment Options-->
-    <style>
-        span{color:whitesmoke; position:absolute; top:777px; left: 17px;}
-        .myU1{color:whitesmoke; position: absolute; top:800px; left: 17px;}
-    </style>
-<!-- Placement of User Options-->
-
-<!--UberX-->
-    <style>
-        .myDiv1 {position: absolute; top: 300px; left: 17px;}
-    </style>
-<!--UberX Warning Sign-->
-    <style>
-    .mySpan1 {position: absolute; top: 375px; left: 30px;}
-    </style>
-<!--UberXL-->
-    <style>
-        .myDiv2 {position: absolute; top: 500px; left: 17px;}
-    </style>
-<!--UberNew-->
-    <style>
-    .myDiv3 {position: absolute; top: 700px; left: 17px;}
-    </style>
-
-<!-- To prevent isssues in display -->
+<!-- Title of Site -->
 <title style = "color: whitesmoke"> Uber.com </title>
 
 </head> 
@@ -55,25 +22,34 @@
 <!--MAIN CONTENT-->
 <body>
 
-<h1 style = "color:whitesmoke"> Book a quick ride with us! </h1>
+    <h1 id = "main-action"> Book a quick ride with us! </h1>
 <!--Practicing Header and nav tag-->
-<header class="header1" style = "color:whitesmoke"> We are a revolutionary Taxi Service. Redefining transportation. 
+<header class="sub-header"> We are a revolutionary Taxi Service. Redefining transportation. 
     Here's more information: <nav>insert_link_here </nav>
 </header>
+<!--Section + Img/Logo Embedding-->
+<div id = "uber-logo">
+    <img src = "https://tinyurl.com/Uber-logo" alt = "Uber Logo" width="500" height="200">
+</div> 
 <!--User Options to book a ride(replaced div with section)-->
-    <div  class = "myDiv1" style = "color: whitesmoke"> 1) UberX  </div>
+    <div  id = "ride-choice1"> 1) UberX  </div>
 <!--Span is an inline element, so it'll follow right after UberX option-->
-    <span class = "mySpan1" style = "color: red" > Only a few are avalaible! Book now! </span>
-<!--1) What happens if I put span and div without an indent? Doesn't matter. Gives same result. -->
-<!--2) What difference does it make if I put span and div next to each other instead of on seperate lines? Doesn't matter. Same thing, unless nested.-->
-<!--3) What happens if I put span inside div(nest it)? The span text is right next to div text-->
-    <div class = "myDiv2" style = "color:whitesmoke"> 2) UberXL </div>
-    <div class = "myDiv3" style = "color: whitesmoke"> 3) UberNew </div>
-<!--Practicing Section and Aside -->
+    <span id = "aval-warning"> Only a few are avalaible! Book now! </span>
+    <div id = "ride-choice2" > 2) UberXL </div> 
+    <div id = "ride-choice3" > 3) UberNew </div>
+
+<!--Practicing Aside tag -->
+
+<!-- Practicing section, links, images with copyright -->
+<!-- goal is to 1) put Uber logo/image betwen main-action and UberX-->
+<!-- 2) link user input to UberX,or other user choices, may need Javascript -->
+<!-- 2a) simple link to go to user choices, then only move on to user input bar that uses JS-->
+<!-- 3) copyright at the bottom -->
+
 
 <!--Practicing Lists-->
 <span>Choose payment:</span>
-<ul class = "myU1">
+<ul id = "payment-choice">  
     <li>Credit Card
         <ul>
             <li>
@@ -90,17 +66,12 @@
     </li>
     <li>ApplePay/GooglePay</li>
 </ul>
-<!--1) Why is it that the subpayment options show up at the very bottom of the page?
-    Can it be because we put all <ul> in one spot but this conflicts with main <ul> tag. So, define the sub <uL> as a class.
-2) What does defining coordinates and color for all <ul>?
-    3) How does it relate to the issue above of showing up on the bottom?-->
 
-<!-- Body: Integrating Python into HTML for data handling/retrieving-->
-<py-script> print("Please choose Payment next!")</py-script>
-<!--using python to ask for input on Ride Option(UberX, etc) and if input is one of the 3 options, then Py spits out, only few left, for example-->
-</body>
+
 
 </html>
+
+
 
 
 
