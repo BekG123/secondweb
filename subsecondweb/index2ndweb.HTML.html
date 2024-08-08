@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang = "en" >
 
 <!-- Body: Integrating Python into HTML for data handling/retrieving-->
 
 <!--"Backend" for tags-->
 <head>
 
-<!--Linking CSS file-->
-<link rel = "stylesheet" type = "text/css" href = "index2ndwebCSS.css">
+    <!--Linking CSS file-->
+    <link rel = "stylesheet" type = "text/css" href = "index2ndwebCSS.css">
 
-<!--Head: Python Incorporation(Succesful download)-->
+    <!--Head: Python Incorporation(Succesful download)-->
 
-<!-- To prevent issues in display -->
-<meta charset = "utf-8">
-
-<!-- Title of Site -->
-<title style = "color: whitesmoke"> Uber.com </title>
+    <!-- To prevent issues in display -->
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of Site -->
+    <title style = "color: whitesmoke"> Uber.com </title>
 
 </head> 
 
@@ -23,51 +23,79 @@
 <body>
 
     <h1 id = "main-action"> Book a quick ride with us! </h1>
+
 <!--Practicing Header and nav tag-->
-<header class="sub-header"> We are a revolutionary Taxi Service. Redefining transportation. 
-    Here's more information: <nav>insert_link_here </nav>
-</header>
+    <header class="sub-header"> We are a revolutionary Taxi Service. Redefining transportation. 
+        <div> 
+            Here's more information:
+            <nav>insert_link_here</na>  
+        </div> 
+        <!--reference to bottom page(future)-->
+        
+    </header>
+
+<!--Class Uber_Choices: User Choices-->
 <!--Section + Img/Logo Embedding-->
-<div id = "uber-logo">
-    <img src = "https://tinyurl.com/Uber-logo" alt = "Uber Logo" width="500" height="200">
-</div> 
-<!--User Options to book a ride(replaced div with section)-->
-    <div  id = "ride-choice1"> 1) UberX  </div>
-<!--Span is an inline element, so it'll follow right after UberX option-->
-    <span id = "aval-warning"> Only a few are avalaible! Book now! </span>
-    <div id = "ride-choice2" > 2) UberXL </div> 
-    <div id = "ride-choice3" > 3) UberNew </div>
-
+    <div class = "uber"> 
+        <img id="uber-logo" src = "https://tinyurl.com/Uber-logo" alt = "Uber Logo" height="200" >
+    </div>
+    
+    <!--User Options to book a ride-->
+    <section id="section1">
+    <span id="choose-ride"> Pick a ride below: </span>
+    <div class = "uber-choices"> 
+        <div id = "ride-choice1"> <a href="#section2"> uberX </a>
+            <div> 
+                <img id = "uberx-logo" src="https://tinyurl.com/2efx3mfu" alt="UberX image" height="200">
+            </div>
+        </div>
+        <div id = "ride-choice2" > <a href="#section2"> uberXL </a>
+                <div>
+                    <img id = "uberxl-logo" src="https://tinyurl.com/4yuyy74z" alt="UberXL image" height="200">
+                </div>
+        </div>
+        <div id = "ride-choice3" > UberNew </div>
+    </div>
+    </section> 
 <!--Practicing Aside tag -->
-
-<!-- Practicing section, links, images with copyright -->
-<!-- goal is to 1) put Uber logo/image betwen main-action and UberX-->
+<!-- <span id = "aval-warning"> Only a few are avalaible! Book now! </span> -->
+<!-- Practicing secztion, links, images with copyright -->
+    
+<!--- 1a) User has the option to hover over the ride choices, the ride-choices highlighted(style, pseudo stuff), then as only 1 option is picked, the page automatically goes to payment options through linking to that part of the page(ref and link)-->
 <!-- 2) link user input to UberX,or other user choices, may need Javascript -->
 <!-- 2a) simple link to go to user choices, then only move on to user input bar that uses JS-->
-<!-- 3) copyright at the bottom -->
-
+<!--let's put images under the options first for ease of linking-->
+<!-- 2b) clicking the UberX option(sublink) and this outputs the warning sign-->
 
 <!--Practicing Lists-->
-<span>Choose payment:</span>
-<ul id = "payment-choice">  
-    <li>Credit Card
-        <ul>
-            <li>
-                MasterCard 6969
+<!-- User picks payment option --> 
+    <span id="choose-payment"> Choose payment: </span>
+    <div class="payment">
+        <section id="section2"> </section>
+        <ul id = "payment-choice">  
+            <li>Credit Cards
+                <hr class="wallet-break1">
+                <hr class="wallet-break2">
+                <ul>
+                    <li> 
+                        MasterCard 6969
+                    </li> 
+                </ul>
+            </li> 
+            <li>Debit Cards
+                <hr class="wallet-break3">
+                <ul>
+                    <li>
+                        Visa 4206
+                </ul>
+                </li>
             </li>
+            <li>ApplePay &nbsp; GooglePay</li>
         </ul>
-    </li>
-    <li>Debit Card
-        <ul>
-            <li>
-                Visa 4206
-            </li>
-        </ul>
-    </li>
-    <li>ApplePay/GooglePay</li>
-</ul>
+    </div>
 
-
+<!--Copyright-->
+    <div class = "copyright">Copyright 2024 &copy; Uber Inc. All rights reserved.</div>
 
 </html>
 
